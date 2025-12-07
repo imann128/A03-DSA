@@ -1,3 +1,4 @@
+#include <cmath>
 #include "experiment_design.h"
 #include "counting_sort.h"
 #include "radix_sort.h"
@@ -231,7 +232,7 @@ void ExperimentDesign::printTable(const std::vector<std::string>& headers,
     
     for (const auto& row : rows) {
         for (size_t i = 0; i < row.size(); i++) {
-            if (row[i].length() > col_widths[i]) {
+            if (row[i].length() > static_cast<size_t>(col_widths[i])) {
                 col_widths[i] = row[i].length();
             }
         }

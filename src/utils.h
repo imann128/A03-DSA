@@ -1,6 +1,8 @@
 #ifndef UTILS_H
 #define UTILS_H
 
+#include <iostream>
+#include <ostream>
 #include <vector>
 #include <string>
 #include <chrono>

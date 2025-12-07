@@ -40,6 +40,8 @@ Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManage
 Then install make:
 choco install make
 
+Makefile is present is src folder. Use command: cd src to navigate to src folder after navigating to or
+
 This compiles all source files into an executable named sorting_demo (or sorting_demo.exe on Windows).
 Flags: -std=c++17 -O2 -Wall -Wextra for optimization and warnings.
 
@@ -52,6 +54,8 @@ make run
 Similarly, ./sorting_demov(Linux) or sorting_demo.exe(Windows)
 
 ### Expected Output:
+![Start Menu](src/start_menu.png)
+
 Demonstrations: Sorts a sample array with each algorithm and verifies results.
 Experiments: Performance timings (ms) for array sizes [1000, 5000, 10000, 50000] across input types (random, nearly sorted, small-range).
 Stability Test: Compares stable vs. non-stable on duplicates.

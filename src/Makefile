@@ -1,15 +1,15 @@
 CXX = g++
-CXXFLAGS = -std=c++17 -Wall -Wextra -O2
+CXXFLAGS = -std=c++17 -Wall -Wextra -O2 -Wno-array-bounds
 TARGET = sort_demo
 
-SRCS = src/main.cpp \
-       src/counting_sort.cpp \
-       src/radix_sort.cpp \
-       src/bucket_sort.cpp \
-       src/pigeonhole_sort.cpp \
-       src/utils.cpp \
-       src/experiment_design.cpp \    
-       src/comparison_sort.cpp        
+SRCS = main.cpp \
+       counting_sort.cpp \
+       radix_sort.cpp \
+       bucket_sort.cpp \
+       pigeonhole_sort.cpp \
+       utils.cpp \
+       experiment_design.cpp \
+       comparison_sort.cpp
 
 OBJS = $(SRCS:.cpp=.o)
 
@@ -22,7 +22,7 @@ $(TARGET): $(OBJS)
 	$(CXX) $(CXXFLAGS) -c $< -o $@
 
 clean:
-	rm -f $(TARGET) src/*.o
+	rm -f $(TARGET) *.o
 
 run: $(TARGET)
 	./$(TARGET)
