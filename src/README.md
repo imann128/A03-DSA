@@ -1,4 +1,4 @@
-### Project Overview
+# Project Overview
 This project implements and evaluates non-comparison sorting algorithms as required for CS250 Assignment 3. We explore Counting Sort (stable and non-stable variants), LSD Radix Sort, and two additional algorithms: Bucket Sort and Pigeonhole Sort. All implementations are in C++ and focus on key data structures, stability, complexity, and assumptions. Experiments compare performance across random, nearly sorted, and small-range inputs to demonstrate how input characteristics influence behavior.
 
 ## Project Structure
@@ -18,14 +18,14 @@ A03-DSA/
 ├── README.md                    # This file
 └── .gitignore                   # Ignores build artifacts and temp files
 
-## Compilation and Execution:
+### Compilation and Execution:
 Compilation & Execution Instructions
 
-# Prerequisites
+### Prerequisites
 Compiler: g++ (C++17 or later).
 Dependencies: Standard Template Library (STL) only—no external libraries.
 
-# Building the Project
+### Building the Project
 Use the provided Makefile
 Open a terminal in the project root (A03-DSA/).
 Run:
@@ -34,7 +34,7 @@ make
 This compiles all source files into an executable named sorting_demo (or sorting_demo.exe on Windows).
 Flags: -std=c++17 -O2 -Wall -Wextra for optimization and warnings.
 
-# Manual Compilation
+### Manual Compilation
 g++ -std=c++17 -O2 -Wall -Wextra -o sorting_demo src/*.cpp
 
 After building, execute:
@@ -42,14 +42,14 @@ make run
 
 Similarly, ./sorting_demov(Linux) or sorting_demo.exe(Windows)
 
-# Expected Output:
+### Expected Output:
 Demonstrations: Sorts a sample array with each algorithm and verifies results.
 Experiments: Performance timings (ms) for array sizes [1000, 5000, 10000, 50000] across input types (random, nearly sorted, small-range).
 Stability Test: Compares stable vs. non-stable on duplicates.
 Analysis: Prints key insights, space complexity, and recommendations.
 Sample run time: <1 minute for all tests.
 
-# Cleaning Build Artifacts
+### Cleaning Build Artifacts
 Run this command:
 make clean
 
@@ -60,7 +60,7 @@ Errors on Windows? Use WSL or install MinGW; ensure paths use forward slashes.
 Missing headers? Verify all .h files are in src/.
 Slow performance? Disable -O2 for debugging.
 
-# Features Implemented
+### Features Implemented
 Counting Sort: Stable (right-to-left placement) and non-stable (left-to-right) variants.
 LSD Radix Sort: Digit-by-digit sorting using stable Counting Sort subroutine.
 Bucket Sort: Distributes into √n buckets; sorts each with std::sort.
@@ -72,7 +72,7 @@ Verification: Checks sorted order and stability.
 
 Experiments: Modular design in experiment_design.h for custom cases.
 
-# Dependencies:
+### Dependencies:
 C++ Standard: C++17 (for auto, chrono, etc.).
 Build Tool: Make (optional; g++ works standalone).
 No runtime dependencies beyond libc++.
