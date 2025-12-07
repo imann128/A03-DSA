@@ -31,6 +31,15 @@ Open a terminal in the project root (A03-DSA/).
 Run:
 make
 
+### Install make on Windows Git Bash:
+Option 1: Install via Chocolatey (Package Manager)
+First install Chocolatey (if not installed):
+# Run in PowerShell as Administrator
+Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
+
+Then install make:
+choco install make
+
 This compiles all source files into an executable named sorting_demo (or sorting_demo.exe on Windows).
 Flags: -std=c++17 -O2 -Wall -Wextra for optimization and warnings.
 
